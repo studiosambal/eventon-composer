@@ -1,8 +1,0 @@
-{
-  "name": "studiosambal/eventon",
-  "description": "EventON plugin (ThemeForest) - Eigen repo voor composer install",
-  "type": "wordpress-plugin",
-  "require": {
-    "composer/installers": "^2.0"
-  }
-}
