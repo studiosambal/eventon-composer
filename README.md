@@ -15,7 +15,7 @@ Soms moet er op één site een extra plugin worden geïnstalleerd die niet in de
 
 - Zet het zip-bestand in de Dropbox-map `/Dropbox/Websites/_premiumplugins`
 - Ga naar [Github](https://github.com/studiosambal/premiumplugins) en bekijk daar de repo
-    - Kopieer de **directe `View raw` link
+    - Kopieer de **directe `View raw` link**
 
 Voorbeeld:
 
@@ -62,7 +62,7 @@ $FORGE_COMPOSER require $PLUGIN_NAME:dev-main --no-interaction --prefer-dist -o 
 
 ### 4. Wat aanpassen?
 
-- **PLUGIN_URL** → zet hier de Dropbox-link van de plugin.
+- **PLUGIN_URL** → zet hier de Github-raw-link van de plugin.
 - **PLUGIN_NAME** → kies een logische naam, bv. `studiosambal/eventon`.
     - Het deel **na de slash** bepaalt de mapnaam in `wp-content/plugins/`.
     - Voorbeeld: `studiosambal/eventontest` → map wordt `wp-content/plugins/eventontest/`.
