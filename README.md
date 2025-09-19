@@ -11,31 +11,32 @@ Soms moet er op één site een extra plugin worden geïnstalleerd die niet in de
 - Download het originele **zip-bestand** van de plugin (zoals je het ook via WordPress → Plugins → Upload zou doen).
 - Let op: laat het zipje zoals het is, dus niet uitpakken of opnieuw inpakken.
 
-### 2. Upload naar Dropbox
+### 2. Upload naar Github
 
 - Zet het zip-bestand in de Dropbox-map `/Dropbox/Websites/_premiumplugins`
-- Kopieer de **directe downloadlink**:
-    - `www.dropbox.com` vervangen door `dl.dropboxusercontent.com`
-    - `?dl=0` weghalen
+- Ga naar [Github](https://github.com/studiosambal/premiumplugins) en bekijk daar de repo
+    - Kopieer de **directe `View raw` link
 
 Voorbeeld:
 
 ```
-OUD: https://www.dropbox.com/scl/fi/XXX/eventon.zip?rlkey=XXX&st=cv38hjmf&dl=0
-NIEUW: https://dl.dropboxusercontent.com/scl/fi/XXX/eventon.zip?rlkey=XXX&st=cv38hjmf
+- Link van repo: https://github.com/studiosambal/premiumplugins/blob/main/eventon.zip
+- De view raw link: https://github.com/studiosambal/premiumplugins/raw/refs/heads/main/eventon.zip
 ```
 
 ### 3. Pas het deployscript aan
 
 In het deployment script van de site (Forge) dit blok toevoegen:
 
+> Zie ErvaarOudewater.nl als voorbeeld 
+
 ```bash
 # --- PREMIUM PLUGIN DIE NIET VIA WP BESCHIKBAAR IS ---
 # ZIE NOTION VOOR MEER INFO: https://www.notion.so/studiosambal/Plugin-installeren-via-Composer-die-niet-via-WordPress-zelf-beschikbaar-is-2714cc6762a780b6a773ec1fa012d223?source=copy_link
 
 # Alleen deze twee aanpassen per plugin
-PLUGIN_URL="https://dl.dropboxusercontent.com/scl/fi/xxxxxx/plugin.zip"
-PLUGIN_NAME="studiosambal/pluginnaam"   # vendor/slug → map wordt wp-content/plugins/<slug>/
+PLUGIN_URL="https://github.com/studiosambal/premiumplugins/raw/refs/heads/main/eventon.zip" # Pas deze aan!
+PLUGIN_NAME="studiosambal/pluginnaam"   # vendor/slug » map wordt wp-content/plugins/<slug>/
 
 # Repo definiëren en installeren
 $FORGE_COMPOSER clear-cache
